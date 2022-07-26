@@ -1,9 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"github.com/jojo-rdan/course/course"
+)
 
 func main() {
-	Go := Course{
+	Go := &course.Course{
 		"Go desde cero",
 		12.34,
 		false,
@@ -14,17 +16,6 @@ func main() {
 			3: "Maps",
 		},
 	}
-	css := Course{
-		Name:   "CSS desde cero",
-		IsFree: true,
-	}
-
-	js := Course{}
-	js.Name = "Curso JS"
-	js.UserIDs = []uint{12, 67}
 
 	Go.PrintClasses()
-	Go.ChangePrice(67.12)
-	fmt.Println(Go.Price)
-	fmt.Println(css.Name)
 }
